@@ -1,6 +1,7 @@
 import React from 'react';
 import { PageId } from '../types';
 import { COMPANY_INFO, DIVISIONS_DATA } from '../data/mockData';
+import { BrandLogo } from './BrandLogo';
 import {
   Phone,
   Mail,
@@ -28,18 +29,8 @@ export const Footer: React.FC<FooterProps> = ({
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
           {/* Column 1: Brand & Founder */}
           <div className="lg:col-span-2 space-y-4">
-            <div className="flex items-center gap-3">
-              <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-[#00A86B] to-[#0D382A] text-white flex items-center justify-center font-display font-extrabold text-lg shadow-md">
-                DSS
-              </div>
-              <div>
-                <span className="font-display font-bold text-xl text-white block leading-tight">
-                  {COMPANY_INFO.name}
-                </span>
-                <span className="text-xs text-[#78A28F] font-mono">
-                  Finance • Technology • Digital Growth
-                </span>
-              </div>
+            <div className="flex items-center">
+              <BrandLogo theme="dark" size="lg" />
             </div>
 
             <p className="text-xs text-[#A4D0BC] leading-relaxed max-w-md font-body">

@@ -1,6 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { PageId, DivisionId } from '../types';
 import { COMPANY_INFO, DIVISIONS_DATA } from '../data/mockData';
+import { BrandLogo } from './BrandLogo';
 import {
   Menu,
   X,
@@ -116,19 +117,10 @@ export const Navbar: React.FC<NavbarProps> = ({
         {/* Brand Logo */}
         <button
           onClick={() => handleNavClick('overview')}
-          className="flex items-center gap-3 text-left group"
+          className="flex items-center text-left group transition-opacity hover:opacity-95"
+          aria-label="Delight Solution Service Home"
         >
-          <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-[#0D382A] to-[#006D43] flex items-center justify-center text-white font-display font-extrabold text-xl shadow-md group-hover:scale-105 transition-transform">
-            DSS
-          </div>
-          <div>
-            <div className="font-display font-bold text-lg text-[#0D382A] leading-tight">
-              Delight Solution Service
-            </div>
-            <div className="font-label text-[10px] uppercase tracking-wider text-[#717974] font-semibold">
-              Finance • Tech • Digital Growth
-            </div>
-          </div>
+          <BrandLogo size="md" />
         </button>
 
         {/* Desktop Nav Items */}

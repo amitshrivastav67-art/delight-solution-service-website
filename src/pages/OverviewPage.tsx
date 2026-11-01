@@ -7,6 +7,7 @@ import {
   HOW_WE_WORK_STEPS,
   FAQ_ITEMS,
 } from '../data/mockData';
+import { BrandLogo } from '../components/BrandLogo';
 import {
   Landmark,
   Cpu,
@@ -102,36 +103,89 @@ export const OverviewPage: React.FC<OverviewPageProps> = ({
             </button>
           </div>
 
-          {/* PRD Exact Hero Headline */}
-          <h1 className="font-display font-extrabold text-3xl sm:text-5xl lg:text-6xl text-white max-w-4xl tracking-tight leading-[1.12]">
-            Practical Business Solutions Across Finance, Technology and Digital Growth.
-          </h1>
+          {/* Hero Grid with Brand Presentation */}
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+            {/* Left 7 Columns: Hero Copy */}
+            <div className="lg:col-span-7 space-y-6">
+              {/* Official Brand Identity Tag */}
+              <div className="inline-flex items-center gap-2.5 px-3 py-1.5 rounded-xl bg-black/40 border border-slate-700/60 text-xs">
+                <div className="w-6 h-6 rounded-md overflow-hidden bg-[#0c1218] p-0.5 flex items-center justify-center border border-slate-600/50">
+                  <img
+                    src={COMPANY_INFO.logoShieldUrl}
+                    alt="DSS Shield Emblem"
+                    className="w-full h-full object-contain"
+                  />
+                </div>
+                <span className="font-semibold text-slate-200 tracking-wide font-mono text-[11px]">
+                  Official Corporate Trademark • Jaipur, India
+                </span>
+              </div>
 
-          {/* PRD Exact Hero Subtext */}
-          <p className="font-body text-base sm:text-lg text-[#C0ECD7] max-w-3xl leading-relaxed">
-            From financial assistance and custom digital products to data analytics, AI automation and professional collaboration, DSS helps individuals and businesses explore practical solutions for their needs.
-          </p>
+              {/* PRD Exact Hero Headline */}
+              <h1 className="font-display font-extrabold text-3xl sm:text-5xl lg:text-5xl xl:text-6xl text-white tracking-tight leading-[1.12]">
+                Practical Business Solutions Across Finance, Technology and Digital Growth.
+              </h1>
 
-          {/* Hero CTAs */}
-          <div className="flex flex-wrap items-center gap-4 pt-2">
-            <button
-              onClick={() => {
-                const el = document.getElementById('divisions-section');
-                if (el) el.scrollIntoView({ behavior: 'smooth' });
-              }}
-              className="px-7 py-3.5 rounded-xl bg-[#00A86B] text-[#002117] font-label font-bold text-sm hover:bg-[#75F8B3] transition-all shadow-lg hover:shadow-emerald-900/40 flex items-center gap-2"
-            >
-              <span>Explore Our Solutions</span>
-              <ArrowRight className="w-4 h-4" />
-            </button>
+              {/* PRD Exact Hero Subtext */}
+              <p className="font-body text-base sm:text-lg text-[#C0ECD7] leading-relaxed">
+                From financial assistance and custom digital products to data analytics, AI automation and professional collaboration, DSS helps individuals and businesses explore practical solutions for their needs.
+              </p>
 
-            <button
-              onClick={() => onNavigate('enquiry')}
-              className="px-7 py-3.5 rounded-xl bg-[#0D382A] text-white border border-[#00A86B]/40 font-label font-bold text-sm hover:bg-[#134E3B] hover:border-[#00A86B] transition-all flex items-center gap-2"
-            >
-              <Send className="w-4 h-4 text-[#75F8B3]" />
-              <span>Discuss Your Requirement</span>
-            </button>
+              {/* Hero CTAs */}
+              <div className="flex flex-wrap items-center gap-4 pt-2">
+                <button
+                  onClick={() => {
+                    const el = document.getElementById('divisions-section');
+                    if (el) el.scrollIntoView({ behavior: 'smooth' });
+                  }}
+                  className="px-7 py-3.5 rounded-xl bg-[#00A86B] text-[#002117] font-label font-bold text-sm hover:bg-[#75F8B3] transition-all shadow-lg hover:shadow-emerald-900/40 flex items-center gap-2"
+                >
+                  <span>Explore Our Solutions</span>
+                  <ArrowRight className="w-4 h-4" />
+                </button>
+
+                <button
+                  onClick={() => onNavigate('enquiry')}
+                  className="px-7 py-3.5 rounded-xl bg-[#0D382A] text-white border border-[#00A86B]/40 font-label font-bold text-sm hover:bg-[#134E3B] hover:border-[#00A86B] transition-all flex items-center gap-2"
+                >
+                  <Send className="w-4 h-4 text-[#75F8B3]" />
+                  <span>Discuss Your Requirement</span>
+                </button>
+              </div>
+            </div>
+
+            {/* Right 5 Columns: Official Platinum Shield Logo Presentation */}
+            <div className="lg:col-span-5 flex justify-center">
+              <div className="relative w-full max-w-md group">
+                {/* Ambient backglow */}
+                <div className="absolute -inset-1 rounded-3xl bg-gradient-to-r from-[#00A86B]/30 via-slate-500/20 to-[#75F8B3]/30 blur-xl opacity-75 group-hover:opacity-100 transition duration-500" />
+
+                {/* Platinum Logo Card */}
+                <div className="relative rounded-2xl bg-[#0B1015] border border-slate-700/80 shadow-2xl p-4 sm:p-5 overflow-hidden">
+                  <div className="flex items-center justify-between pb-3 mb-2 border-b border-slate-800 text-[10px] font-mono text-slate-400">
+                    <span className="flex items-center gap-1.5 text-emerald-400 font-semibold">
+                      <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
+                      AUTHENTICATED IDENTITY
+                    </span>
+                    <span>DSS LOGO v3.0</span>
+                  </div>
+
+                  {/* Logo Image */}
+                  <div className="overflow-hidden rounded-xl border border-slate-800 bg-[#070b0e] p-2 flex items-center justify-center">
+                    <img
+                      src={COMPANY_INFO.logoHorizontalUrl}
+                      alt="Delight Solution Service Monochrome Platinum Brushed Shield Logo"
+                      className="w-full h-auto object-contain transition-transform duration-500 group-hover:scale-102"
+                    />
+                  </div>
+
+                  <div className="pt-3 flex items-center justify-between text-[11px] text-slate-400 font-mono">
+                    <span>Delight Solution Service</span>
+                    <span className="text-[#A4D0BC]">Jaipur • Global Delivery</span>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
 
           {/* Quick Credibility Footnote (Zero Fabricated Metrics) */}

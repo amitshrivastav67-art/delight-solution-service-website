@@ -34,8 +34,12 @@ export const PRDAuditModal: React.FC<PRDAuditModalProps> = ({
         {/* Header */}
         <div className="bg-[#002117] text-white p-6 border-b border-[#0D382A] flex items-start justify-between shrink-0">
           <div className="flex items-start gap-4">
-            <div className="w-12 h-12 rounded-xl bg-[#00A86B]/20 border border-[#00A86B] text-[#75F8B3] flex items-center justify-center shrink-0">
-              <Award className="w-6 h-6 text-[#75F8B3]" />
+            <div className="w-12 h-12 rounded-xl overflow-hidden bg-[#0c1218] border border-slate-700 p-1 flex items-center justify-center shrink-0 shadow-md">
+              <img
+                src={COMPANY_INFO.logoShieldUrl}
+                alt="DSS Emblem"
+                className="w-full h-full object-contain"
+              />
             </div>
             <div>
               <div className="flex items-center gap-2 flex-wrap">

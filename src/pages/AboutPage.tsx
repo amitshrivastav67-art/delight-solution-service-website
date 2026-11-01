@@ -91,6 +91,47 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onNavigate }) => {
           </div>
         </div>
 
+        {/* Official Brand Identity & Logo Presentation Card */}
+        <div className="p-8 rounded-2xl bg-[#0B1015] text-white border border-slate-800 shadow-xl flex flex-col lg:flex-row items-center gap-8">
+          <div className="w-full lg:w-80 shrink-0 overflow-hidden rounded-xl bg-[#070b0e] border border-slate-700/80 shadow-2xl p-3 flex items-center justify-center">
+            <img
+              src={COMPANY_INFO.logoHorizontalUrl}
+              alt="Delight Solution Service Official Logo"
+              className="w-full h-auto object-contain rounded"
+            />
+          </div>
+
+          <div className="space-y-3 flex-1">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-[11px] font-mono font-bold uppercase tracking-wider bg-emerald-500/10 border border-emerald-500/30 text-emerald-400">
+              <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
+              <span>Official Trademark & Visual Identity</span>
+            </div>
+
+            <h3 className="font-display font-bold text-2xl text-white">
+              The Platinum Shield & Interlocking DSS Knot
+            </h3>
+
+            <p className="text-xs sm:text-sm text-slate-300 font-body leading-relaxed">
+              The Delight Solution Service emblem integrates a brushed platinum protective shield symbolizing fiduciary trust and risk governance, enclosing an interlocking infinity knot monogram that represents the seamless symbiosis between Financial Advisory, Technology Engineering, and Professional Collaboration.
+            </p>
+
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-2 text-xs font-mono">
+              <div className="p-2.5 rounded-lg bg-slate-900 border border-slate-800">
+                <span className="text-slate-400 block text-[10px] uppercase">Shield Iconography</span>
+                <span className="text-emerald-400 font-bold">Fiduciary Protection</span>
+              </div>
+              <div className="p-2.5 rounded-lg bg-slate-900 border border-slate-800">
+                <span className="text-slate-400 block text-[10px] uppercase">Interlocking Monogram</span>
+                <span className="text-emerald-400 font-bold">Finance • AI • Network</span>
+              </div>
+              <div className="p-2.5 rounded-lg bg-slate-900 border border-slate-800">
+                <span className="text-slate-400 block text-[10px] uppercase">Palette Metallurgy</span>
+                <span className="text-emerald-400 font-bold">Monochrome Platinum</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
         {/* Operating Model Grid */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           <div className="p-6 rounded-2xl bg-white border border-[#CFDDD3] shadow-sm space-y-3">
