@@ -1,0 +1,152 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-outfit: 'Outfit', sans-serif;
+    --font-jakarta: 'Plus Jakarta Sans', sans-serif;
+    --font-inter: 'Inter', sans-serif;
+  }
+
+  body {
+    background-color: #f8faf8;
+    color: #191c1b;
+    font-family: var(--font-jakarta);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-outfit);
+  }
+}
+
+/* Custom Typography Utilities from Design System */
+.font-display {
+  font-family: 'Outfit', sans-serif;
+}
+
+.font-body {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+.font-label {
+  font-family: 'Inter', sans-serif;
+}
+
+/* Hairline borders */
+.border-hairline {
+  border-color: #e2ebe5;
+}
+
+.border-sage {
+  border-color: #cfddd3;
+}
+
+/* Glass backdrop surfaces */
+.glass-panel {
+  background-color: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid #e2ebe5;
+}
+
+.glass-header {
+  background-color: rgba(248, 250, 248, 0.90);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(13, 56, 42, 0.08);
+}
+
+.glass-dark-tech {
+  background-color: rgba(10, 20, 16, 0.94);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(0, 168, 107, 0.22);
+}
+
+/* Custom shadow system tinted with deep forest pigment */
+.shadow-forest-ambient {
+  box-shadow: 0 20px 40px -12px rgba(13, 56, 42, 0.12);
+}
+
+.shadow-forest-card {
+  box-shadow: 0 4px 20px -2px rgba(13, 56, 42, 0.06);
+}
+
+.shadow-tech-glow {
+  box-shadow: 0 0 25px -4px rgba(0, 168, 107, 0.25);
+}
+
+/* Dual Division Card Hover Effects */
+.division-card-finance {
+  transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.2s ease, border-color 0.2s ease;
+  position: relative;
+}
+
+.division-card-finance::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 0px;
+  background-color: #0d382a;
+  transition: height 0.2s ease;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+.division-card-finance:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 32px -8px rgba(13, 56, 42, 0.12);
+}
+
+.division-card-finance:hover::before {
+  height: 3px;
+}
+
+.division-card-tech {
+  transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.2s ease, border-color 0.2s ease;
+  position: relative;
+}
+
+.division-card-tech::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 0px;
+  background-color: #00a86b;
+  transition: height 0.2s ease;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+.division-card-tech:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 32px -8px rgba(0, 168, 107, 0.16);
+}
+
+.division-card-tech:hover::before {
+  height: 3px;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f2f4f2;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #c1c8c3;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #717974;
+}
